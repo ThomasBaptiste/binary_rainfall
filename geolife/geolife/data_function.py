@@ -18,11 +18,3 @@ def sin_transformer(period):
 
 def cos_transformer(period):
     return FunctionTransformer(lambda x: np.cos(x / period * 2 * np.pi))
-
-#--------------------------SUBMISSION-----------------------------
-
-def submission(datapath, id, data, name):
-    predictions_df = pd.DataFrame({"id": id, "rainfall": data})
-    predictions_df.to_csv(datapath / name, index=False)
-
-    print("Predictions saved!")
